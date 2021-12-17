@@ -1,0 +1,528 @@
+##Sum for If statement
+"""WAP to check if a number is Even"""
+x=int(input("Enter a number:"))
+if(x%2==0):
+    print(x,"is an Even Number")
+
+"""WAP to check if the input number is present in list a or not"""
+a=[1,2,3,4,5,6,7,8,10,90,87,65,54,43,22,12,34,56,87,98]
+i=int(input("Enter a number:"))
+if i in a:
+    print(i,"is present in List A")
+
+"""WAP to check if a number is Positive using only IF condition"""
+i=int(input("Enter a number:"))
+if(i>0):
+    print(i,"is a Positive number")
+
+
+##Sums for IF ELSE Statements
+"""WAP to check if a number is Even or Odd"""
+x=int(input("Enter a number:"))
+if(x%2==0):
+    print("The number is Even")
+else:
+    print("The number is Odd")
+
+"""WAP to check if a number is Positive or Negative using If Else Statements"""
+x=int(input("Enter a number:"))
+if (x>=0):
+    print(x,"is a Positive number")
+else:
+    print(x,"is a Negative number")
+
+"""WAP to print grade achieved by a student based on the marks received:
+75 and above--> A grade
+60-74--> B grade
+35-59--> C grade
+Below 35--> Fail"""
+n=int(input("Enter the marks received:"))
+if(n>=75):
+    print("Congratulations, you have received an A grade in the test")
+elif(60<=n<=74):
+    print("Congratulations, you have received a B grade in the test")
+elif(35<=n<=59):
+    print("Congratulations, you have received a C grade in the test")
+else:
+    print("Sorry! You have FAILED the test")
+
+"""WAP to accept the Purchase price of a car and  calculate the road tax:
+Purchase Price                Tax Rate
+10,00,000 and above             18%
+7,00,000-10,00,000              15%
+5,00,000-7,00,000               12%
+Less than 5,00,000              NIL"""
+
+purprice=int(input("Enter the purchase price of the vehicle:"))
+if(purprice>=1000000):
+    a=(purprice*0.18)
+    print(f"Road tax payable for the vehicle is Rs.{a}")
+elif((purprice>=700000) and (purprice<1000000)):
+    b=(purprice*0.15)
+    print(f"Road tax payable for the vehicle is Rs.{b}")
+elif((purprice>=500000) and (purprice<700000)):
+    c=(purprice*0.12)
+    print(f"Road tax payable for the vehicle is Rs.{c}")
+else:
+    print("Road tax payable for the vehicle is NIL")
+
+
+"""WAP to take 3 numbers as inputs and find the greatest of the 3 numbers"""
+def greatestno():
+    a=int(input("Enter the first number:"))
+    b=int(input("Enter the second number:"))
+    c=int(input("Enter the third number:"))
+    if(a>b and a>c):
+        print(a,"is the greatest number")
+    elif(a<b and b>c):
+        print(b,"is the greatest number")
+    elif(a>b and a<c):
+        print(c,"is the greatest number")
+    else:
+        print(c,"is the greatest number")
+
+
+
+"""WAP to take 3 numbers as inputs and find the smallest of the 3 numbers"""
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+if(a>b and b<c):
+    print(b,"is the smallest number")
+elif(a<b and a<c):
+    print(a,"is the smallest number")
+elif(a>b and b>c):
+    print(c,"is the smallest number")
+else:
+    print(c,"is the smallest number")
+
+##Sums for Nested IF
+"""WAP to find the greatest out of 3 numbers using Nested If"""
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+if(a>b):
+    if(a>c):
+        print("The greatest number is",a)
+    else:
+        print("The greatest number is",c)
+else:
+    if(b>c):
+        print("The greatest number is",b)
+    else:
+        print("the greatest number is",c)
+
+
+"""WAP to find the middle number out of 3 input numbers"""
+a=int(input("Enter the first number:"))
+b=int(input("Enter the second number:"))
+c=int(input("Enter the third number:"))
+if(a>b):
+    if(b>c):
+        print("The middle number is",b)
+    elif(c>a):
+        print("The middle number is",a)
+    else:
+        print("The middle number is",c)
+else:
+    if(a>c):
+        print("The middle number is",a)
+    elif(c>b):
+        print("The middle number is",b)
+    else:
+        print("The middle number is",c)
+
+
+"""WAP to find the square of the entered number"""
+x=int(input("Enter a number:"))
+print(f"The square of {x} is {x**2}")
+
+"""WAP to find the cube of the entered number"""
+x=int(input("Enter a number:"))
+print(f"The cube of {x} is {x**3}")
+
+
+"""WAP to calculate Fahrenheit to Celcius"""
+##(32°F − 32) × 5/9 = 0°C
+f=int(input("Enter the Fahrenheit temperature:"))
+c=((f-32)*0.5556)
+print(f"The conversion of {f} degree Fahrenheit into Celcius is {c} degree Celcius") 
+
+
+"""WAP to calculate Compound Interest"""
+## CI = P( 1 + r/100)n - P
+def compoundint():
+    p=int(input("Enter the Principal amount:"))
+    r=int(input("Enter the rate of interest:"))
+    n=int(input("Enter the time period of investment:"))
+    ci=(p*((1+(r/100))**n))-p
+    print(f"""The Compound Interest on the sum of {p} over
+    a period of {n} time frame at {r}% rate of interest is Rs.{ci}""")
+
+
+"""WAP to calculate BMI"""
+##BMI=(Weight/Height^2)
+name=input("Enter your name:")
+weight=int(input("Enter the Weight in (kg):"))
+height=int(input("Enter your Height in (cm):"))
+h1=(height/100)#This will convert height from cm to m
+bmi=(weight/(h1**2))
+print(f" The BMI of {name} is {bmi}")
+
+"""WAP to calculate the Area of a Triangle"""
+##Area of a triangle= 0.5*base*height
+height=int(input("Enter your Height in (cm):"))
+base=int(input("Enter the base measurement in (cm):"))
+aot=0.5*base*height
+print(f"Area of a triangle is {aot} units")
+
+"""WAP to calculate the Area of a Rectangle"""
+##Area of a rectangle= width*length
+width=int(input("Enter the measurement of width(cm):"))
+length=int(input("Enter the measurement of length (cm):"))
+aor=width*length
+print(f"Area of the rectangle is {aor} square units")
+
+
+"""WAP to numbers from 1-50 using for loop"""
+for i in range(1,51):
+    print(i,end=" ")
+##Same can be done using WHILE Loop as:
+i=1
+while(i<=50):
+    print(i,end=" ")
+    i=i+1
+
+"""WAP to find the sum of 1 to 100 numbers"""
+tot=0
+for i in range(1,101):
+    tot=tot+i
+print(tot)
+#Same can be done using WHILE Loop as:
+tot=0
+i=1
+while(i<=100):
+    tot=tot+i
+    i=i+1
+print(tot)
+
+
+"""WAP to find the multiplication table of a user entered number"""
+a=int(input("Enter a number:"))
+for i in range(1,11):
+    print(f"{a} x {i} = {a*i}")
+#Same can be done using WHILE Loop as:
+a=int(input("Enter a number:"))
+i=1
+while(i<=10):
+     print(f"{a} x {i} = {a*i}")
+     i=i+1
+    
+
+"""WAP to create 2 different lists for all the odd and even numbers from 1-50"""
+e=[]
+o=[]
+for i in range(1,51):
+    if(i%2==0):
+        e.append(i)
+    else:
+        o.append(i)
+print(e)
+print(o)
+#Same can be done using WHILE Loop as:
+e=[]
+o=[]
+i=1
+while(i<=50):
+    if(i%2==0):
+        e.append(i)
+    else:
+        o.append(i)
+    i=i+1
+print(e)
+print(o)
+
+
+
+"""WAP to find the factorial of a given number using for and while loop"""
+x=int(input("Enter a number:"))
+f=1
+for i in range(1,x+1):
+    f=f*i
+print(f"The factorial of {x} is",f)
+#Same can be done using WHILE Loop as:
+x=int(input("Enter a number:"))
+i=1
+f=1
+while(i<=x):
+    f=f*i
+    i=i+1
+print(f"The factorial of {x} is", f)
+    
+
+"""WAP to find the reverse of the user entered number"""
+x=int(input("Enter a number:"))
+x1=x
+rev=0
+while(x>0):
+    rem=(x%10)
+    rev=(rev*10)+rem
+    x=(x//10)
+print(f"The reverse of {x1} is",rev)
+
+
+"""WAP to check if a number is Palindrome or not"""
+n=int(input("Enter a number:"))
+n1=n
+rev=0
+while(n>0):
+    rem=(n%10)
+    rev=(rev*10)+rem
+    n=(n//10)
+if(n1==rev):
+    print(n1,"is a Palindrome number")
+else:
+    print(n1,"is not a Palindrome number")
+
+"""WAP to check if a number is an Armstrong number or not"""
+def armstrong(n):
+    n1=n
+    n2=n
+    d=0
+    tot=0
+    while(n>0):
+        n=(n//10)
+        d=d+1
+    while(n1>0):
+        rem=(n1%10)
+        tot=tot+(rem**d)
+        n1=(n1//10)
+    if(n2==tot):
+        print(n2,"is an Armstrong number")
+    else:
+        print(n2,"is not an Armstrong number")
+    
+"""WAP to check if a number is Prime or not"""
+def checkprime(n):
+    c=0
+    for i in range(2,n):
+        if(n%i==0):
+            c=c+1
+            break
+    if(c==0):
+        print(n,"is a prime number")
+    else:
+        print(n,"is not a prime number")
+
+
+"""WAP to check if a number is a Perfect number or not"""
+n=int(input("Enter a number:"))
+n1=n
+tot=0
+for i in range(1,n):
+    if(n%i==0):
+        tot=tot+i
+if(n1==tot):
+    print(n1,"is a Perfect number")
+else:
+    print(n1,"is not a Perfect  number")
+
+"""WAP to print fibonacci series"""
+x=0
+y=1
+n=int(input("Enter a number:"))
+for i in range(1,n+1):
+    print(x,end=" ")
+    z=x+y
+    x=y
+    y=z
+
+
+"""WAP to check if  anumber is a Strong number or not"""
+def checkstrong(n):
+    n1=n
+    tot=0
+    while(n>0):
+        rem=(n%10)
+        f=1
+        for i in range(1,rem+1):
+            f=f*i
+        tot=tot+f
+        n=(n//10)
+    if(n1==tot):
+        print(n1,"is a Strong number")
+    else:
+        print(n1,"is not a Strong number")
+
+
+"""WAP to check if a number is a Neon number or not"""
+n=int(input("Enter a number:"))
+sq=(n**2)
+tot=0
+while(sq>0):
+    rem=(sq%10)
+    tot=tot+rem
+    sq=(sq//10)
+if(n==tot):
+    print(n,"is a Neon number")
+else:
+    print(n,"is not a  Neon number")
+    
+"""Write a program to print number between 1 to 50
+which is divisible by 3 but not by 7  """
+for i in range(1,51):
+    if((i%3==0) and(i%7!=0)):
+       print(i,end=" ")
+
+
+items = [{'apple': 5}, {'banana': 8}, {'orange': 7}, {'grapes': 4}]
+b={}
+for i in range(len(items)):
+    b.update(items[i])
+x=max(b.values())
+for key,value in b.items():
+    if value==x:
+        print(key)
+
+
+##Practicing List Comprehension
+"""let’s create a list of squares of the first 10 integers."""
+x=[(i**2)for i in range(1,11)]
+print(x)
+#Output is as Follows:
+##[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+
+"""Create a list of remainders when we divide the first 10 squares by 5,
+to find the remainder when we devide by 5 use the % operator."""
+x=[((i**2)%5)for i in range(1,11)]
+print(x)
+##Output is as Follows:
+##[1, 4, 4, 1, 0, 1, 4, 4, 1, 0]
+
+"""Suppose we have a list of words and we want to find those word which
+startswith the letter ‘n’."""
+grammar = ["is","no","am","not","never","will",
+           "nither","shall","can", "could","should",
+           "none","nor","was","were"]
+
+x=[(i)for i in grammar if i.startswith("n")]
+print(x)
+#Output is as Follows:
+##['no', 'not', 'never', 'nither', 'none', 'nor']
+
+"""Suppose we have a list of tuples containing the book and the year
+it released.Our task is it find the books released after 2000."""
+
+library = [("book1",1995),("book2",2001),
+           ("book3",1996),("book4",2002), 
+           ("book5",1997),("book6",2003),
+           ("book7",1998),("book8",2004),
+           ("book9",1999), ("book10",2000)]
+
+x=[(i[0])for i in library if (i[1]>2000)]
+print(x)
+#Output is as Follows:
+##['book2', 'book4', 'book6', 'book8']
+
+
+"""Suppose we use a list to represent a vector,
+what if we want to multiply each by 4"""
+v=[2,4,6,8,10]
+m=[(i*4)for i in v]
+print(m)
+#Output is as Follows:
+##[8, 16, 24, 32, 40]
+
+##Now looking at an Example of Cross Product
+##AxB = {(a,b) | a∈A , b∈B }
+A={1,2,3}
+B={"m","n","o"}
+v=[(a,b)for a in A for b in B]
+print(v)
+#Output is as follows:
+##[(1, 'm'), (1, 'n'), (1, 'o'), (2, 'm'),
+## (2, 'n'), (2, 'o'), (3, 'm'), (3, 'n'), (3, 'o')]
+
+
+
+"""WAP to find all the odd numberz from 1-100"""
+x=[(i)for i in range(1,101) if (i%2!=0)]
+print(x)
+
+
+
+x=[1823501,1823502,1823503,1823504,1823505,1823506,1823507,1823508,1823509,1823510]
+def validate(rollno):
+    for i in x:
+        if(rollno==i):
+            return(f"Student with roll number {rollno} is Present in the class")
+        else:
+            raise Exception(f"Student with {rollno} roll number is absent today!!!")
+
+
+try:
+    x=int(input("Enter a number:"))
+    y=int(input("Enter a number:"))
+    c=(x/y)
+except ZeroDivisionError as e:
+    print(f"Trying to divide by 0:{e}")
+else:
+    print(c)
+finally:
+    print("This is end of Example")
+    
+
+##Pattern-1
+a=4
+for i in range(a+1):
+    for j in range(i):
+        print("*",end="")
+    print()
+
+Pattern-2
+b=4
+for i in range(b+1):
+    for j in range(b,i,-1):
+        print("*",end="")
+    print()
+##        
+
+##Pattern 3
+a=4
+for i in range(a+1):
+    for j in range(i):
+        print("*",end="")
+    print()
+for i in range(a+1):
+    for j in range(a-2,i-1,-1):
+        print("*",end="")
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
